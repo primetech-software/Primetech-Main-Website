@@ -4,6 +4,7 @@ import { theme } from "../components/Theme";
 import Layout from "../components/layout";
 import GlobalStyle from "../components/globalStyles";
 import LoadingScreen from "../components/LoadingScreen";
+import { Analytics } from "@vercel/analytics/next"
 // import Router from 'next/router';
 // import NProgress from 'nprogress'; //nprogress module
 // import 'nprogress/nprogress.css'; //styles of nprogress
@@ -25,6 +26,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
+      <Analytics />
       <ThemeProvider theme={theme}>
         {!loading ? (
           <LoadingScreen />
